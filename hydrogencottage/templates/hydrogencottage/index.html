@@ -1,0 +1,123 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" type="text/css" href="{% static 'hydrogencottage/style/jquery.fullpage.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'hydrogencottage/style/style.css' %}" />
+    <link rel="stylesheet" href="http://vjs.zencdn.net/5.19.0/video-js.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.easings.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.fullpage.min.js' %}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                verticalCentered: true,
+                sectionsColor: ['#FFFFFF', '#FFFFFF', '#2196F3', '#2c3e50'],
+                anchors: ['acceuil', 'mission', 'pitch', 'partenaires'],
+                menu: '#menu',
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Acceuil', 'Notre mission', 'Pitch', 'Partenaires'],
+                responsiveWidth: 900,
+                afterResponsive: function (isResponsive) {
+
+                }
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <ul id="menu">
+            <li data-menuanchor="acceuil"><a href="#acceuil">Acceuil</a></li>
+            <li data-menuanchor="mission"><a href="#mission">Mission</a></li>
+            <li data-menuanchor="pitch"><a href="#pitch">Pitch</a></li>
+            <li data-menuanchor="partenaires"><a href="#partenaires">Partenaires</a></li>
+        </ul>
+    </div>
+    <div id="fullpage">
+        <div id="section0" class="section">
+            <video id="bgvid" loop muted data-autoplay>
+                <source src="{% static 'hydrogencottage/videos/acceuil.mp4' %}" type="video/mp4">
+                <source src="{% static 'hydrogencottage/videos/acceuil.webm' %}" type="video/webm">
+            </video>
+            <div class="layer">
+                Hydrogen Cottage
+            </div>
+        </div>
+        <div id="section1" class="section">
+            <div class="backgroundImageCVR">
+                <div class="background-image">
+                </div>
+            </div>
+            <div class="content">
+                <article>
+                    <header>
+                        <h1>Notre mission</h1>
+                    </header>
+                    <section>
+                        <p>
+                            Les territoires non interconnectés (ZNI), tels que la Guadeloupe, possédent leur propre réseau de distribution électrique
+                            et doivent supporter le déploiement progressif des énergies renouvelables non garanties (solaire,
+                            éolien, EMR).
+                        </p>
+                        <p>
+                            La mission d’Hydrogène Cottage consiste à démarrer des expérimentations pour valider l’apport des technologies de l’hydrogène
+                            dans des systèmes énergétiques permettant d’assurer en continu un approvisionnement en énergie
+                            pour un territoire insulaire avec des modèles économiques viables.
+                        </p>
+                    </section>
+                </article>
+            </div>
+        </div>
+        <div id="section2" class="section">
+            <article>
+                <header>
+                    <h1>Pitch</h1>
+                </header>
+                <section>
+                    <div class="wrapper">
+                        <div class="videocontent">
+                            <video id="my-video" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls preload="auto" width="1280"
+                                height="720" data-setup="{}">
+                                <source src="{% static 'hydrogencottage/videos/Pitch.mp4' %}" type='video/mp4'>
+                            </video>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <div id="section3" class="section">
+            <h1>Partenaires</h1>
+            <div id='partenaire-gallery'>
+                <a href="http://www.cea.fr/">
+                    <figure>
+                        <img src="http://www.ac-grenoble.fr/disciplines/sii/img/manifestations/osi/partenaires/logo_CEA.png" alt="">
+                    </figure>
+                </a>
+                <a href="http://www.cea.fr/">
+                    <figure>
+                        <img src="http://www.rse-magazine.com/photo/art/grande/7895903-12264052.jpg?v=1434026443" alt="">
+                    </figure>
+                </a>
+                <a href="http://www.cea.fr/">
+                    <figure>
+                        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/ae/R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg/912px-R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg.png"
+                            alt="">
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://vjs.zencdn.net/5.19.0/video.js"></script>
+</body>
+
+</html>

@@ -90,3 +90,8 @@ db.sqlite3
 
 #visual studio code
 .vscode/
+
+#project settings
+website/settings.py
+
+#static directory

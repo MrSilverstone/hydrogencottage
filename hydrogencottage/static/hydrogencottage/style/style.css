@@ -34,6 +34,7 @@ body{
   text-align: center;
   padding: 0;
   margin: 0;
+	float: left;
 }
 
 #menu-right {
@@ -41,6 +42,7 @@ body{
   text-align: center;
   padding: 0;
   margin: 0;
+	float: right;
 }
 
 #menu-right li, #menu-left li {
@@ -49,6 +51,33 @@ body{
   height: 80px;
   border-bottom: 1px solid white;
 	color: #DF6F37;
+
+
+		margin-right: 30px;
+		margin-left: 30px;
+    border-bottom: none;
+    height: 80px;
+    line-height: 80px;
+    font-size: 1.4em;
+		float: left
+}
+
+	#menu-right ul, #menu-left ul {
+		margin-right: 30px;
+		float : right;
+	}
+
+	nav a#openup {
+  	display: none;
+	}
+
+
+#openup {
+	font-size: 1.2em;
+  line-height: 80px;
+  height: 80px;
+	color: white;
+	text-decoration: none;
 }
 
 #menu-right a {
@@ -72,29 +101,76 @@ body{
 	}
 }
 
-@media screen and (min-width: 900px) {
-  #menu-right li, #menu-left li {
-		margin-right: 30px;
-		margin-left: 30px;
-    border-bottom: none;
-    height: 80px;
-    line-height: 80px;
-    font-size: 1.4em;
-		float: left
+@media screen and (max-width: 1280px) {
+  h1 {
+    font-size: 2.8em;
   }
 
+  nav {
+    height: auto;
+    border-bottom: 0;
+  }
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    background: #333;
+    border-bottom: 1px solid #555;
+  }
+  nav a:hover {
+    background: #444;
+  }
+  nav a#openup:after {
+    content: "|||";
+    transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    /* IE 9 */
+    -webkit-transform: rotate(-90deg);
+    /* Safari and Chrome */
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+  }
+  nav a#openup {
+    display: block;
+    background-color: #333;
+    width: 100%;
+    position: relative;
+  }
+
+	#menu-right li {
+		margin-right: 0px;
+		margin-left: 0px;
+	} 
+
 	#menu-right {
-		float: right;
+		float: none;
 	}
+}
 
-	#menu-left{
-		float: left;
-	}
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
 
-	#menu-right ul, #menu-left ul {
-		margin-right: 30px;
-		float : right;
-	}
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  zoom: 1;
 }
 
 .section {
@@ -113,8 +189,12 @@ body{
     overflow: hidden;
 }
 
+.layer {
+		background-color: rgba(0, 0, 0, 0.2);	
+}
+
 #section-accueil .layer {
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.3);
 }
 
 .desc-text {

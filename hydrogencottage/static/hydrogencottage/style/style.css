@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('http://fonts.googleapis.com/css?family=Oswald:400,300,700');
 
 body{
 		color: white;
@@ -197,6 +198,10 @@ body{
 		background-color: rgba(0, 0, 0, 0.3);
 }
 
+#section-partenaires .layer {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .desc-text {
 	margin-top: 10%;
 	font-size: 150%;
@@ -289,6 +294,169 @@ body{
 	margin: 0px auto;
 }
 
+.selector {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 350px;
+  height: 350px;
+  margin-top: -175px;
+  margin-left: -175px;
+}
+
+.selector button {
+    position: relative;
+    width:100%; height:100%;
+    padding: 10px;
+    background: #428bca;
+    border-radius: 50%;
+    border: 0;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 3px 3px rgba(0,0,0,.1);
+    transition: all .1s;
+}
+
+.selector, .selector button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+}
+
+.selector button:hover {
+  background: #3071a9;
+}
+
+.selector button:focus {
+  outline: none;
+}
+
+.selector ul {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+}
+
+.selector li {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  margin: 0 50%;
+	transform: rotate(-360deg);
+  -webkit-transform: rotate(-360deg);
+  transition: all 0.8s ease-in-out;
+}
+
+.selector li input {
+  display: none;
+}
+
+.selector li input + label {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  line-height: 1px;
+  margin-left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 1px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: none;
+  transition: all 0.8s ease-in-out, color 0.1s, background 0.1s;
+}
+
+.selector li input + label:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.selector li input:checked + label {
+  background: #5cb85c;
+  color: white;
+}
+
+.selector li input:checked + label:hover {
+  background: rgba(51, 51, 102, 0.93);
+}
+
+.selector.open li input + label {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  margin-left: -100px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+.selector.open li input:checked + label {
+  width: 300px;
+  height: 300px;
+  line-height: normal;
+  margin-left: -150px;
+  font-size: 13px;
+}
+
+.selector.open li input:checked + label::first-line {
+  line-height: 300px;
+}
+
+.top-left{
+  background: url('../images/top-left.jpg'); 
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+
+.top-right{
+  background: url('../images/top-right.jpg'); 
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+
+
+.bottom-left{
+  background: url('../images/bottom-left.jpg'); 
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+
+
+.bottom-right{
+  background: url('../images/bottom-right.jpg'); 
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+
+#section-partenaires {
+	top: 0;
+	bottom: 0;
+	color: white;
+	background-image: url(../images/partenaires_bg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
 
 #section-partenaires #partenaire-gallery a{
 	font-size: 16px;
@@ -354,3 +522,32 @@ body{
 #fp-nav li .active span, .fp-slidesNav .active span{
 		background: #fff;
 	}
+
+  #section-contact{
+        background-image: url(../images/about_bg.jpg);
+  }
+
+#about-footer{
+    background-color: #242424;
+    position: absolute;
+    bottom: 0;
+
+    height:80px;
+    width: 100%;
+    vertical-align: middle;
+    font-family: 'Raleway';
+    font-size: 1.4em;
+    box-shadow: 0px 1px 3px 3px black;
+  }
+
+  #mail{
+    float: left;
+    vertical-align: middle;
+    margin-left: 30px;
+    line-height: 80px;
+  }
+
+  #mail a{
+    color: #DF6F37;
+    text-decoration: none;
+  }

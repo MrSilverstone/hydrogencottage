@@ -14,7 +14,6 @@
     <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.easings.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.fullpage.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.fullpage.extensions.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.parallax-1.1.3.js' %}"></script>
     <script type="text/javascript" src="{% static 'hydrogencottage/scripts/site.js' %}"></script>
 </head>
 
@@ -141,44 +140,109 @@
             </div>
         </div>
 
-
-
-
         <div id="section-village" class="section">
-            <h1>Le village!!!</h1>
+            <div class="layer">
+                <div class="top-left"></div>
+                <div class="top-right"></div>
+                <div class="bottom-left"></div>
+                <div class="bottom-right"></div>
+                <div class='selector'>
+                    <ul>
+                        <li>
+                            <input id='1' type='checkbox' />
+                            <label for='1'>Une ferme bio</label>
+                        </li>
+                        <li>
+                            <input id='2' type='checkbox' />
+                            <label for='2'>Agrotourisme</label>
+                        </li>
+                        <li>
+                            <input id='3' type='checkbox' />
+                            <label for='3'>Acceuil des associations</label>
+                        </li>
+                        <li>
+                            <input id='4' type='checkbox' />
+                            <label for='4'>Expérimentation hydrogene</label>
+                        </li>
+                        <li>
+                            <input id='5' type='checkbox' />
+                            <label for='5'>Centre équestre</label>
+                        </li>
+                    </ul>
+                    <button>
+                        Autoconsommation alimentaire<br/>
+                        Autoconsommation énergétique<br/>
+                        Récupération d’eau<br/>
+                        Efficacité énergétique<br/>
+                        Gestion et recyclage des déchets<br/>
+                        Mobilité verte<br/>
+                        Pédagogie Formation<br/>
+                        Communication
+                    </button>
+                </div>
+            </div>
         </div>
 
 
-
-
         <div id="section-partenaires" class="section">
-            <h1>Partenaires</h1>
-            <div id='partenaire-gallery'>
-                <a href="http://www.cea.fr/">
-                    <figure>
-                        <img src="http://www.ac-grenoble.fr/disciplines/sii/img/manifestations/osi/partenaires/logo_CEA.png" alt="">
-                    </figure>
-                </a>
-                <a href="http://www.cea.fr/">
-                    <figure>
-                        <img src="http://www.rse-magazine.com/photo/art/grande/7895903-12264052.jpg?v=1434026443" alt="">
-                    </figure>
-                </a>
-                <a href="http://www.cea.fr/">
-                    <figure>
-                        <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/ae/R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg/912px-R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg.png"
-                            alt="">
-                    </figure>
-                </a>
+            <div class="layer">
+
+                <h1>Partenaires</h1>
+                <div id='partenaire-gallery'>
+                    <a href="http://www.cea.fr/">
+                        <figure>
+                            <img src="http://www.ac-grenoble.fr/disciplines/sii/img/manifestations/osi/partenaires/logo_CEA.png" alt="">
+                        </figure>
+                    </a>
+                    <a href="http://www.cea.fr/">
+                        <figure>
+                            <img src="http://www.rse-magazine.com/photo/art/grande/7895903-12264052.jpg?v=1434026443" alt="">
+                        </figure>
+                    </a>
+                    <a href="http://www.cea.fr/">
+                        <figure>
+                            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/ae/R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg/912px-R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg.png"
+                                alt="">
+                        </figure>
+                    </a>
+                </div>
             </div>
         </div>
 
         <div id="section-contact" class="section">
-            <h1>Contact</h1>
+            <div class="layer">
+                
+                <article>
+                    <header>
+                        <h1>A propos</h1>
+                    </header>
+                    
+                    <section class="desc-text">
+                        <p>
+                            Hydrogen Cottage a été fondée par Hervé MONDESIR Docteur en Géochimie. Hervé a été responsable commercial pendant 18 ans
+                            chez Cisco Systems, le leader mondial des infrastructures de l’internet.
+                        </p>
+                        <p> L’équipe est complétée par Ching-Ying TONG, Docteur en Physique de formation. Il a été expert pendant
+                            16 ans chez Cisco dans la transition des réseaux de voix traditionnelle vers les réseaux internet.</p>
+                        <p>
+                            Ariane DOSSIER, avocate de formation et ex-juriste chez Cisco nous a rejoint récemment. Ariane a participé à la mise en place
+                            d’un programme d’investissement de 200M$ de fonds Cisco destiné notamment au financement des
+                            startup françaises.
+                        </p>
+                    </section>
+                </article>
+                <footer id="about-footer">
+                    <div id="mail">
+                        Contact : <a href="mailto:herve.mondesir@h2cottage.com">herve.mondesir@h2cottage.com</a>
+                    </div>
+                </footer>
+            </div>
+
         </div>
 
-
     </div>
+
+
     <script src="http://vjs.zencdn.net/5.19.0/video.js"></script>
 </body>
 

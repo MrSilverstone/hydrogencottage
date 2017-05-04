@@ -74,12 +74,32 @@ function initOnePage() {
       scrollBar: true,
       fixedElements: '#fixed-header',
       afterLoad: function (anchorLink, index) {
-        console.log(index);
+
+        if (index == 3) {
+          var myPlayer = videojs("my-video");
+          myPlayer.play();
+        }
+
+        if (index == 4) {
+          var myPlayer = videojs("my-video2");
+          myPlayer.play();
+        }
+
         if (index == 5) {
           toggleOptions('.selector');
         }
       },
       onLeave: function (index, nextIndex, direction) {
+        if (index == 3) {
+          var myPlayer = videojs("my-video");
+          myPlayer.pause();
+        }
+
+        if (index == 4) {
+          var myPlayer = videojs("my-video2");
+          myPlayer.pause();
+        }
+
         if (index == 5) {
           toggleOptions('.selector');
         }

@@ -1,27 +1,25 @@
-{% load static %}
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <title>Hydrogen Cottage</title>
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" type="text/css" href="{% static 'hydrogencottage/style/jquery.fullpage.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'hydrogencottage/style/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="../../static/hydrogencottage/style/jquery.fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="../../static/hydrogencottage/style/style.css" />
     <link rel="stylesheet" href="http://vjs.zencdn.net/5.19.0/video-js.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.easings.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.fullpage.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/jquery.fullpage.extensions.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'hydrogencottage/scripts/site.js' %}"></script>
+    <script type="text/javascript" src="../../static/hydrogencottage/scripts/jquery.easings.min.js"></script>
+    <script type="text/javascript" src="../../static/hydrogencottage/scripts/jquery.fullpage.min.js"></script>
+    <script type="text/javascript" src="../../static/hydrogencottage/scripts/jquery.fullpage.extensions.min.js"></script>
+    <script type="text/javascript" src="../../static/hydrogencottage/scripts/site.js"></script>
 </head>
 
 <body>
     <div id="fixed-header">
         <ul id="menu-left">
             <li>Hydrogen Cottage</li>
-            <li><img id='logo' src="{% static 'hydrogencottage/images/logo.png' %}" /></li>
+            <li><img id='logo' src="../../static/hydrogencottage/images/logo.png" /></li>
         </ul>
         <nav class="cf">
             <ul id="menu-right" class="cf">
@@ -41,8 +39,8 @@
     <div id="fullpage">
         <div id="section-accueil" class="section">
             <video id="bgvid" loop muted data-autoplay>
-                <source src="{% static 'hydrogencottage/videos/acceuil.mp4' %}" type="video/mp4">
-                <source src="{% static 'hydrogencottage/videos/acceuil.webm' %}" type="video/webm">
+                <source src="../../static/hydrogencottage/videos/accueil.mp4" type="video/mp4">
+                <source src="../../static/hydrogencottage/videos/accueil.webm" type="video/webm">
             </video>
             <div class="layer">
                 <h1 id='accueil-title'>La transition énergetique en action</h1>
@@ -90,7 +88,7 @@
                             <div class="videocontent">
                                 <video id="my-video" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls preload="auto" width="1280"
                                     height="720" data-setup="{}">
-                                    <source src="{% static 'hydrogencottage/videos/Pitch.mp4' %}" type='video/mp4'>
+                                    <source src="../../static/hydrogencottage/videos/Pitch.mp4" type='video/mp4'>
                                 </video>
                             </div>
                         </div>
@@ -112,7 +110,7 @@
                             <div class="videocontent">
                                 <video id="my-video2" class="video-js vjs-default-skin vjs-16-9 vjs-big-play-centered" controls preload="auto" width="1280"
                                     height="720" data-setup="{}">
-                                    <source src="{% static 'hydrogencottage/videos/experimentation.mp4' %}" type='video/mp4'>
+                                    <source src="../../static/hydrogencottage/videos/experimentation.mp4" type='video/mp4'>
                                 </video>
                             </div>
                         </div>
@@ -131,26 +129,26 @@
                     <ul>
                         <li>
                             <input id='1' type='checkbox' />
-                            <label for='1'>Une ferme bio</label>
+                            <label for='1'><span style="display: inline-block;">Une ferme bio</span></label>
                         </li>
                         <li>
                             <input id='2' type='checkbox' />
-                            <label for='2'>Agrotourisme</label>
+                            <label for='2'><span style="display: inline-block;">Agrotourisme</span></label>
                         </li>
                         <li>
                             <input id='3' type='checkbox' />
-                            <label for='3'>Acceuil des associations</label>
+                            <label for='3'><span style="display: inline-block;">Accueil des associations</span></label>
                         </li>
                         <li>
                             <input id='4' type='checkbox' />
-                            <label for='4'>Expérimentation hydrogene</label>
+                            <label for='4'><span style="display: inline-block;">Expérimentation hydrogene</span></label>
                         </li>
                         <li>
                             <input id='5' type='checkbox' />
-                            <label for='5'>Centre équestre</label>
+                            <label for='5'><span style="display: inline-block;">Centre équestre</span></label>
                         </li>
                     </ul>
-                    <button>
+                    <button id="main-circle">
                         Autoconsommation alimentaire<br/>
                         Autoconsommation énergétique<br/>
                         Récupération d’eau<br/>
@@ -167,25 +165,61 @@
 
         <div id="section-partenaires" class="section">
             <div class="layer">
-
                 <h1>Partenaires</h1>
-                <div id='partenaire-gallery'>
-                    <a href="http://www.cea.fr/">
-                        <figure>
-                            <img src="http://www.ac-grenoble.fr/disciplines/sii/img/manifestations/osi/partenaires/logo_CEA.png" alt="">
-                        </figure>
-                    </a>
-                    <a href="http://www.cea.fr/">
-                        <figure>
-                            <img src="http://www.rse-magazine.com/photo/art/grande/7895903-12264052.jpg?v=1434026443" alt="">
-                        </figure>
-                    </a>
-                    <a href="http://www.cea.fr/">
-                        <figure>
-                            <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/a/ae/R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg/912px-R%C3%A9gion_Guadeloupe_(logo_de_plaque_d%27immatriculation).svg.png"
-                                alt="">
-                        </figure>
-                    </a>
+
+                <div id="cea">
+                    <img src="../../static/hydrogencottage/images/cea_logo.png" width="250" align="left">
+                    <div class="partenaires-text">
+                        Les technologies de l’hydrogène font l’objet de nombreux programmes de recherches au CEA depuis la fin des années 1980. Elles
+                        prennent part dans les missions de l’organisme en matière de développement des énergies nouvelles
+                        et reposent notamment sur des savoir-faire en termes de matériaux, de procédés hautes températures
+                        et hautes pressions, et en termes d’intégration des technologies.
+                    </div>
+                    </img>
+                </div>
+
+                <div id="universite">
+                    <img src="../../static/hydrogencottage/images/universite_logo.jpg" width="250" align="left">
+                    <div>
+                        Le Laboratoire de Recherche en Géosciences (LaRGe) de l’Université des Antilles et de la Guyane est constitué de groupes
+                        travaillant sur des thématiques connexes en géosciences qui sont liées aux risques, aux questions
+                        environnementales et aux énergies renouvelables.
+                    </div>
+                    <p>
+                        Les axes de recherche stratégiques conduits par le LARGE sont les suivant:
+                        <ul>
+                            <li>
+                                Conception intégrée d'unités urbaines comprenant les aspects liés à la maîtrise de l’énergie et à l’efficacité énergétiques
+                                des bâtiments (vers des modèles de bâtiments énergies positive)
+                            </li>
+                            <li>
+                                Étude de matériaux bio sourcés pour la construction
+                            </li>
+                            <li>
+                                Énergies renouvelables (y compris énergies renouvelables marines)
+                            </li>
+                            <li>
+                                Réseaux d’énergie intelligents (”smart grids”)
+                            </li>
+                        </ul>
+                        Le rôle de l’UA consistera à travailler sur la définition de la prévision de la production PV et des consommations du complexe
+                        agrotouristique, l’optimisation énergétique des bâtiments et du confort thermique
+
+                    </p>
+                    </img>
+                </div>
+
+
+                <div id="mines">
+                    <img src="../../static/hydrogencottage/images/mines_logo.png" width="250" align="left">
+                    <div>
+                        L’école des Mines de Nancy a retenu notre projet comme sujet d’études pour des étudiants de troisième année d’ingénieur dans
+                        le cadre de l’opération Artem insight qui a débuté en décembre 2016. Ce sujet s’inscrivait dans le
+                        prolongement d’un mémoire sur la maison hydrogène qui avait été réalisé dans cette école en 2014.
+                        La direction de l’école des Mines à décidé de continuer de nous accompagner sur l’année 2016-2107,
+                        dans le cadre des ateliers Artem Insigh. Elle travaillera sur les impacts socio-économiques du projet.
+                    </div>
+                    </img>
                 </div>
             </div>
         </div>
